@@ -1,34 +1,32 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './assets/scss/app.scss';
 
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom';
+
+import Header from './layouts/Header/Header';
+import Footer from './layouts/Footer/Footer';
 
 
 function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-
       <nav className="navbar-links">
         <Link to="/CarMasters/">Home</Link>
         <Link to="/CarMasters/contact">Contact</Link>
       </nav>
-     
-      <Outlet />
 
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="App">
+        <div className="wrapper">
+          <Header />
+
+          <main className="page">
+            <Outlet />
+          </main>
+
+          <Footer />
+        </div>
+      </div>
     </>
   )
 }
