@@ -1,0 +1,22 @@
+@import '../../assets/scss/variables.scss';
+
+
+.logo {
+   @extend %flex-center;
+
+   img {
+
+   }
+
+   span {
+      display: inline-block;
+      margin-left: 5px;
+      color: var(--text-purple);
+
+      @include adaptiveValue("font-size", 28, 20);
+      line-height: 108.5%; /* 30.38px */
+      letter-spacing: 0.56px;
+
+     
+   }
+}
