@@ -1,0 +1,13 @@
+.rules {
+   color: var(--text-white);
+   
+   &__link {
+      font-weight: 600;
+      line-height: 0.9;
+      text-align: center;
+
+      &:not(:first-child) {
+         margin-left: 20px;
+      }
+   }
+}
