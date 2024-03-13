@@ -2,6 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
+import Logo from '../../components/Logo/Logo';
 import { InventoryButton, RequestButton } from '../../components/Buttons/Buttons';
 
 
@@ -15,7 +16,7 @@ function Header() {
       <header className="header">
          <div className="header__container">
             <div className="header__body">
-               <div className="logo"></div>
+               <Logo/>
 
                <div className="header__block">
                   <div className="header__button-box">

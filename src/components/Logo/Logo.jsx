@@ -1,13 +1,17 @@
 import './Logo.scss';
 
-import logo from '../../assets/images/logo.svg';
+
+import { Icon } from '../Icon/Icon';
 
 
 function Logo() {
 
    return (
       <a className="logo" href="#">
-         <img src={logo} alt="Logo" />
+         <div className="logo__image">
+            <Icon id='logo' className='svg-logo' />
+            <Icon id='logo' className='svg-logo' />
+         </div>
          <span>CarMasters</span>
       </a>
    )

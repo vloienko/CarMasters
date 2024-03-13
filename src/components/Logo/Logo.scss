@@ -1,22 +1,55 @@
 @import '../../assets/scss/variables.scss';
+@import '../../assets/scss/common.scss';
 
 
 .logo {
    @extend %flex-center;
 
-   img {
+   &__image {
+      width: 43px;
+      height: 32px;
+      position: relative;
 
+      & .svg-logo {
+         width: 43px;
+         height: 32px;
+         position: absolute;
+
+         &:last-child {
+            transform: rotate(-180deg) scaleX(-1);
+         }
+      }
    }
-
+   
    span {
       display: inline-block;
       margin-left: 5px;
-      color: var(--text-purple);
 
       @include adaptiveValue("font-size", 28, 20);
-      line-height: 108.5%; /* 30.38px */
-      letter-spacing: 0.56px;
+      line-height: 1.08;
+      letter-spacing: 0.56px;     
+   }
+}
 
-     
+
+.header .logo {
+
+   span {
+      color: var(--text-purple);
+   }
+
+   & .svg-logo {
+      fill: var(--accent-color);
+   }
+}
+
+.footer .logo {
+   
+   span {
+      color: var(--text-white);
+   }
+
+   & .svg-logo {
+      fill: var(--white-color);
    }
 }
