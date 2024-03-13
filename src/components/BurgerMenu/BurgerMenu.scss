@@ -1,0 +1,16 @@
+@import '../../assets/scss/common.scss';
+
+
+
+.svg-burger-menu {
+   width: 37px;
+   height: 30px;
+   fill: var(--main-color);
+}
+
+.menu {
+
+   &__icon {
+      @extend %flex-center;
+   }
+}

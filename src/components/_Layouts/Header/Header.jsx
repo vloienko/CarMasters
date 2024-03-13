@@ -4,6 +4,7 @@ import React from 'react';
 
 import Logo from '../../Logo/Logo';
 import { InventoryButton, RequestButton } from '../../Buttons/Buttons';
+import { BurgerMenu } from '../../BurgerMenu/BurgerMenu';
 
 
 // Import
@@ -23,7 +24,8 @@ function Header() {
                      <InventoryButton/>
                      <RequestButton/>
                   </div>
-
+                  
+                  <BurgerMenu/>
                </div>
             </div>
          </div>

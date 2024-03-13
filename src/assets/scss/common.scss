@@ -8,10 +8,21 @@
 // %button {}
 
 
+%box-shadow {
+   box-shadow: 0px 1px 0px 0px #D7D7D7;
+}
+
+
 %flex-center {
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+%flex-space-bw {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 %flex-column {
