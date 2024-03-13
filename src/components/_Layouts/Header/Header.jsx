@@ -2,8 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-import Logo from '../../components/Logo/Logo';
-import { InventoryButton, RequestButton } from '../../components/Buttons/Buttons';
+import Logo from '../../Logo/Logo';
+import { InventoryButton, RequestButton } from '../../Buttons/Buttons';
 
 
 // Import

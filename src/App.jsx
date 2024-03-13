@@ -2,8 +2,8 @@ import './assets/scss/app.scss';
 
 import { Link, Outlet } from 'react-router-dom';
 
-import Header from './layouts/Header/Header';
-import Footer from './layouts/Footer/Footer';
+import Header from './components/_Layouts/Header/Header';
+import Footer from './components/_Layouts/Footer/Footer';
 
 
 function App() {
