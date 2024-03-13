@@ -12,7 +12,8 @@ function Logo() {
             <Icon id='logo' className='svg-logo' />
             <Icon id='logo' className='svg-logo' />
          </div>
-         <span>CarMasters</span>
+         <span className='pc'>CarMasters</span>
+         <span className='mobile'>CM</span>
       </a>
    )
 }

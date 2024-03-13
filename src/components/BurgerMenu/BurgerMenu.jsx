@@ -5,7 +5,7 @@ import { Icon } from '../Icon/Icon';
 
 export const BurgerMenu = () => {
    return (
-      <div className="header__menu menu">
+      <div className="burger__menu menu">
          <button type="button" className="menu__icon icon-menu">
             <Icon id='burger-menu' className='svg-burger-menu' />
          </button>

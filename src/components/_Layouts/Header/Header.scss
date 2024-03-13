@@ -12,21 +12,47 @@
 
 	background-color: var(--header);
 	@extend %box-shadow;
+
+	@media (max-width:$mobileSmall){
+		height: 55px;
+	}
+
+	&__container {
+		width: 100%;
+	}
 		
 	&__body {
 		@extend %flex-space-bw;
 	}
 
 	&__block {
-		margin-left: 40px;
-		@extend %flex-space-bw;
+		margin-left: 20px;
+		@extend %flex-center;
+		width: 100%;
+
+		& .burger__menu {
+			@include adaptiveValue("margin-left", 63, 23);
+		}
 	}
 
 	&__button-box {
-		@extend %flex-center;
+		@extend %flex;
+		justify-content: flex-end;
+		width: 100%;
 
 		& .button-request {
 			margin-left: 20px;
+
+			@media (max-width:$mobileSmall){
+				max-width: 130px;
+				margin-left: 0; 
+			}
+		}
+
+		@media (max-width:$mobileCustom){
+			& .button-inventory {
+				display: none;
+			}
 		}
 	}
 }

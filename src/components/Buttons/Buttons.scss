@@ -1,3 +1,4 @@
+@import '../../assets/scss/variables.scss';
 @import '../../assets/scss/common.scss';
 
 
@@ -20,6 +21,11 @@
       &:hover{
          transform: scale(1.05);
       }
+   }
+
+   @media (max-width:$mobileSmall){
+      font-size: 14px; 
+      height: 35px;
    }
 }
 
