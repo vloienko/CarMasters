@@ -1,13 +1,29 @@
+@import '../../assets/scss/common.scss';
+
+
 .rules {
+   @extend %flex-center;
    color: var(--text-white);
+
+   li {
+      &:not(:first-child) {
+         margin-left: 20px;
+      }
+
+      @media (any-hover: hover){
+         &:hover .rules__link {
+            border-color: var(--white-color);
+         }
+      }
+
+   }
    
    &__link {
       font-weight: 600;
       line-height: 0.9;
       text-align: center;
-
-      &:not(:first-child) {
-         margin-left: 20px;
-      }
+      @extend %transition-border-color;
+      padding-bottom: 1px;
+      border-bottom: 2px solid transparent;
    }
 }

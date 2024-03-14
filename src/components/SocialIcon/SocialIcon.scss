@@ -13,15 +13,17 @@
       @extend %flex-center;
       padding: 7px;
       
+      border: 1px solid transparent;
       border-radius: 4px;
       background-color: var(--button-default);
-      @extend %transition-button-bg;
+      @extend %transition-all;
 
       svg {
          display: inline-block;
          width: 100%;
          height: 100%;
          fill: var(--icon-default);
+         @extend %transition-fill;
       }
 
       @media (any-hover: hover){
@@ -30,5 +32,24 @@
          }
       }
 
+   }
+}
+
+.footer .social-icon__link {
+   background-color: var(--bg-button-white);
+
+   svg {
+      fill: var(--icon-accent);
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: var(--button-hover);
+         border-color: var(--bg-button-white);
+
+         svg {
+            fill: var(--icon-default);
+         }
+      }
    }
 }
