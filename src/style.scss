@@ -59,6 +59,10 @@ body {
 
 .page {
 	margin-top: toRem(80);
+
+	@media (max-width:$mobileSmall){
+		margin-top: toRem(55);
+	}
 }
 
 

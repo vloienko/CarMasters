@@ -1,0 +1,24 @@
+@import '../../../assets/scss/common.scss';
+
+
+.main-slider {
+   @extend %flex-center;
+   max-width: 600px;
+   width: 100%;
+   padding: 0 55px;
+   position: relative;
+
+   @media (max-width:$mobileSmall){
+      max-width: 100%;
+      padding: 0 25px;
+   }
+
+   & .swiper-slide {
+      @extend %flex-center;
+
+      img {
+        max-width: 100%;
+      }
+   }
+
+}

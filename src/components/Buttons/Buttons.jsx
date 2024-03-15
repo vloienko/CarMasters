@@ -12,3 +12,9 @@ export const RequestButton = () => {
       <button className='button-request' type="button">Request a car</button>
    );
 };
+
+export const RequestButtonChoice = () => {
+   return (
+      <button className='button-request-choice' type="button">Request a suv</button>
+   );
+};

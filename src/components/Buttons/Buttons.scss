@@ -57,3 +57,17 @@
       border-color: var(--accent-color);
    }
 }
+
+.button-request-choice {
+   @extend %button;
+   max-width: 200px;
+
+   border-color: var(--accent-color);
+   background-color: var(--bg-button-white);
+   color: var(--text-purple);
+
+   &:active {
+      color: var(--text-white);
+      background-color: var(--accent-color);
+      }
+}
