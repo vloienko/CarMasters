@@ -12,7 +12,7 @@ function App() {
     <>
       <nav className="navbar-links">
         <Link to="/CarMasters/">Home</Link>
-        <Link to="/CarMasters/contact">Contact</Link>
+        <Link to="/CarMasters/contact-us">Contact us</Link>
       </nav>
 
 

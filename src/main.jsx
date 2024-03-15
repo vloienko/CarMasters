@@ -6,7 +6,7 @@ import './style.scss';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home.jsx';
-import { Contact } from './pages/Contact.jsx';
+import { ContactUs } from './pages/ContactUs.jsx';
 
 
 const router = createBrowserRouter([
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/CarMasters/contact",
-        element: <Contact />,
+        path: "/CarMasters/contact-us",
+        element: <ContactUs />,
       },
     ]
   }

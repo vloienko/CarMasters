@@ -1,19 +1,27 @@
 import './BurgerMenu.scss';
 
-import { Icon } from '../Icon/Icon';
+import Menu from '../Menu/Menu';
+import { useState } from 'react';
 
 
 export const BurgerMenu = () => {
+
+   const [menuActive, setMenuActive] = useState(false);
+
    return (
-      <div className="burger__menu menu">
-         <button type="button" className="menu__icon icon-menu">
-            <Icon id='burger-menu' className='svg-burger-menu' />
+      <div className="burger-menu">
+         <button
+            type="button"
+            className={menuActive ? 'icon-menu active' : 'icon-menu'}
+            onClick={() => setMenuActive(!menuActive)}>
+            <span></span>
          </button>
-         <nav className="menu__body">
-            <ul className="menu__list">
-               <li className="menu__item"><a href="" className="menu__link"></a></li>
-            </ul>
-         </nav>
+
+         <div className={ menuActive ? 'bg-opacity active' : 'bg-opacity' }>
+            <nav className={ menuActive ? 'navigation active' : 'navigation' }>
+               <Menu />
+            </nav>
+         </div>
       </div>
    );
 };
