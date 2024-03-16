@@ -1,5 +1,6 @@
 .navbar-links {
 	position: fixed;
+	z-index: 100;
 	top: 50%;
 	left: 5px;
 	transform: translateY(-50%);
@@ -11,7 +12,7 @@
 	flex-direction: column;
 
 	a {
-		color: #7481FF;
+		color: #000;
 		display: block;
 		max-width: max-content;
 		width: 100%;
@@ -31,7 +32,7 @@
 				left: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #fff;
+				background-color: #000;
 			}
 		}
 	}

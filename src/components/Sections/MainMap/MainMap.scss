@@ -36,17 +36,24 @@
    }
 
    &__body {
-      @extend %flex-space-bw;
+      @extend %flex;
+      align-items: flex-end;
+      justify-content: space-between;
       width: 100%;
 
       @media (max-width:$tablet){
          flex-direction: column;
+         align-items: center;
       }
    }
 
    &__info {
       max-width: 534px;
       width: 100%;
+
+      @media (max-width:$tablet) {
+         max-width: 600px;
+      }
    }
 
    & .main-slider {
@@ -71,7 +78,11 @@
    }
 
    & .button-request-choice {
-      margin-top: 60px;
+      margin-top: 56px;
+
+      @media (max-width:$tablet){
+         margin-top: 60px;
+      }
 
       @media (max-width:$mobileSmall){
          margin-top: 40px;
