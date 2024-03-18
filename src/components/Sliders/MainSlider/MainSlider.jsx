@@ -24,7 +24,7 @@ export const MainSlider = () => {
             modules={[Navigation]}
             spaceBetween={10}
             slidesPerView={1}
-            loop={true}
+            // loop={true}
             navigation={{
                nextEl: ".slide-next-button",
                prevEl: ".slide-prev-button",
