@@ -19,7 +19,7 @@ $fontFamily: "Gilroy";
 $fontSize: toRem(16); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
-$mainColor: #000; // Колір шрифту за замовчуванням
+$mainColor: var(--text-secondary); // Колір шрифту за замовчуванням
 
 // Палітра кольорів
 @import "./assets/scss/base/colors-palette";

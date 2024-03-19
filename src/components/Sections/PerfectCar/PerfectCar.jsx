@@ -19,7 +19,7 @@ export const PerfectCar = () => {
    return (
       <section className="perfect-car">
          <div className="perfect-car__container">
-            <h2 className="perfect-car__title">Your perfect car in 5 easy steps</h2>
+            <h3 className="perfect-car__title">Your perfect car in 5 easy steps</h3>
             <div className="perfect-car__body">
                <div className="perfect-car__steps">
                   {stepsData.map((step, index) => (
