@@ -8,6 +8,7 @@ import { EasyStep } from '../../EasyStep/EasyStep';
 
 
 export const PerfectCar = () => {
+   
    const stepsData = [
       { number: '1', title: 'First Contact', text: 'Tell us what your dream vehicle is.' },
       { number: '2', title: 'Vehicle Selection', text: 'One of our Qualified Agents sends you custom pictures and videos of the car you are interested in.' },

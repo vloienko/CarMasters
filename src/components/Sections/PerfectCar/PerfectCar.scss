@@ -3,6 +3,7 @@
 
 .perfect-car {
    @extend %sections-between;
+   margin-bottom: 14px;
 
    &__title {
       @extend %h2-title;

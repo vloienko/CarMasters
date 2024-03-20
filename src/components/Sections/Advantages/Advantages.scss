@@ -1,0 +1,20 @@
+@import '../../../assets/scss/common.scss';
+
+.advantages {
+   @extend %sections-between;
+
+   &__title {
+      @extend %h2-title;
+   }
+
+   &__body {
+      margin-top: 60px;
+      width: 100%;
+      height: 430px;
+      position: relative;
+
+      @media (max-width:$pc){
+
+      }
+   }
+}
