@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import './Buttons.scss';
 
 
-export const InventoryButton = () => {
+export const InventoryButton = ({ color }) => {
    return (
-      <button className='button-inventory' type="button">Inventory</button>
+      <button className={`button-inventory ${color}`} type="button">Inventory</button>
    );
 };
 

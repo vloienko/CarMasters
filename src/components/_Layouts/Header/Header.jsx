@@ -13,19 +13,21 @@ import "./Header.scss";
 
 function Header() {
 
+   const color = "white";
+
    return (
       <header className="header">
          <div className="header__container">
             <div className="header__body">
-               <Logo/>
+               <Logo />
 
                <div className="header__block">
                   <div className="header__button-box">
-                     <InventoryButton/>
-                     <RequestButton/>
+                     <InventoryButton color={color} />
+                     <RequestButton />
                   </div>
                   
-                  <BurgerMenu/>
+                  <BurgerMenu />
                </div>
             </div>
          </div>

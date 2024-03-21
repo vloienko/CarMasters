@@ -17,10 +17,8 @@
    text-transform: uppercase;
    white-space: nowrap;
 
-   @media (any-hover: hover){
-      &:hover{
-         transform: scale(1.05);
-      }
+   &:active {
+      transform: scale(1.05);
    }
 
    @media (max-width:$mobileSmall){
@@ -30,31 +28,54 @@
 }
 
 
-.button-inventory{
+.button-inventory {
    @extend %button;
-   max-width: 137px;
 
-   border-color: var(--accent-color);
-   background-color: var(--bg-button-white);
-   color: var(--text-purple);
+   &.white {
+      max-width: 137px;
 
-   &:active {
-      color: var(--text-white);
-      background-color: var(--accent-color);
+      border-color: var(--button-default);
+      color: var(--button-default);
+      background-color: var(--bg-button-white);
+
+      @media (any-hover: hover){
+         &:hover{
+            border-color: var(--button-hover);
+            color: var(--button-hover);
+         }
+      }
+
+      &:disabled {
+         opacity: 0.5;
+      }
    }
+
+   &.purple {
+      max-width: 190px;
+
+      background-color: var(--button-default);
+      color: var(--text-white);
+   
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: var(--button-hover);
+         }
+      }
+   }
+
 }
 
 .button-request {
    @extend %button;
    max-width: 200px;
 
-   background-color: var(--accent-color);
+   background-color: var(--button-default);
    color: var(--text-white);
 
-   &:active {
-      color: var(--text-purple);
-      background-color: var(--bg-button-white);
-      border-color: var(--accent-color);
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: var(--button-hover);
+      }
    }
 }
 
@@ -62,12 +83,18 @@
    @extend %button;
    max-width: 200px;
 
-   border-color: var(--accent-color);
+   border-color: var(--button-default);
+   color: var(--button-default);
    background-color: var(--bg-button-white);
-   color: var(--text-purple);
 
-   &:active {
-      color: var(--text-white);
-      background-color: var(--accent-color);
+   @media (any-hover: hover) {
+      &:hover {
+         border-color: var(--button-hover);
+         color: var(--button-hover);
       }
+   }
+
+   &:disabled {
+      opacity: 0.5;
+   }
 }

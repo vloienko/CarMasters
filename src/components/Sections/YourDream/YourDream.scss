@@ -1,0 +1,27 @@
+@import '../../../assets/scss/common.scss';
+
+.your-dream {
+   @extend %sections-between;
+
+   &__body {
+      padding-bottom: 12px;
+      @extend %flex-space-bw;
+
+      & .info-block {
+         margin-left: 20px;
+         max-width: 500px;
+         align-self: flex-start;
+      }
+   }
+
+   &__image {
+      margin-top: 30px;
+      max-width: 600px;
+      width: 100%;
+      align-self: flex-end;
+
+      img {
+         @extend %wh100;
+      }
+   }
+}
