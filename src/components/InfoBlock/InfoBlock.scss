@@ -5,9 +5,16 @@
    &__title {
       @extend %h2-title;
    }
+   
+   &__wrap {
+      margin-top: 20px;
+
+      @media (max-width:$mobileSmall){
+         margin-top: 10px;
+      }
+   }
 
    &__text {
-      margin-top: 20px;
       font-weight: 400;
       line-height: 1.8;
       letter-spacing: 0.32px;
@@ -15,5 +22,10 @@
 
    & button {
       margin-top: 40px;
+
+      @media (max-width:$mobileSmall){
+         margin-top: 30px;
+         max-width: 100% !important;
+      }
    }
 }

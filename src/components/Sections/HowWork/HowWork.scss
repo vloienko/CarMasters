@@ -65,12 +65,12 @@
       }
 
       @media (max-width:$mobileSmall){
-         padding-bottom: 185px;
+         padding-bottom: 186px;
       }
    }
 
    &__block {
-      margin-top: -40px;
+      margin-top: -38px;
       @extend %block-wrap;
       max-width: 605px;
 
@@ -93,6 +93,7 @@
    }
 
    &__descr {
+      text-align: center;
       @extend %description;
    }
 }
