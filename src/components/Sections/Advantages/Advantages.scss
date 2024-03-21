@@ -5,6 +5,10 @@
 
    &__title {
       @extend %h2-title;
+
+      @media (max-width:$tablet){
+         text-align: center;
+      }
    }
 
    &__body {
@@ -14,7 +18,19 @@
       position: relative;
 
       @media (max-width:$pc){
+         height: 660px;
+      }
 
+      @media (max-width:$tablet){
+         height: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+      }
+
+      @media (max-width:$mobileSmall){
+         margin-top: 30px;
       }
    }
 }
