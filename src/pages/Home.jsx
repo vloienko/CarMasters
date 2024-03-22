@@ -1,8 +1,9 @@
-import { Advantages } from '../components/Sections/Advantages/Advantages';
-import { HowWork } from '../components/Sections/HowWork/HowWork';
-import { MainMap } from '../components/Sections/MainMap/MainMap';
-import { PerfectCar } from '../components/Sections/PerfectCar/PerfectCar';
-import { YourDream } from '../components/Sections/YourDream/YourDream';
+import { Advantages } from '../components/_Sections/Advantages/Advantages';
+import { Customers } from '../components/_Sections/Customers/Customers';
+import { HowWork } from '../components/_Sections/HowWork/HowWork';
+import { MainMap } from '../components/_Sections/MainMap/MainMap';
+import { PerfectCar } from '../components/_Sections/PerfectCar/PerfectCar';
+import { YourDream } from '../components/_Sections/YourDream/YourDream';
 
 
 export function Home() {
@@ -13,6 +14,7 @@ export function Home() {
          <PerfectCar />
          <Advantages />
          <YourDream />
+         <Customers />
       </>
    );
 }

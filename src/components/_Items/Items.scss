@@ -1,0 +1,6 @@
+@import '../../assets/scss/common.scss';
+
+
+.heading-h2 {
+   @extend %h2-title;
+}

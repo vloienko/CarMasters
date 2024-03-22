@@ -36,6 +36,18 @@
    }
 }
 
+%h4-title {
+   color: var(--text-content);
+   font-size: 25px;
+   line-height: 1.4;
+   letter-spacing: 0.5px;
+
+   @media (max-width:$mobileSmall){
+      font-size: 20px;
+      letter-spacing: 0.4px;
+   }
+}
+
 // %sub-title {}
 
 %description {
@@ -49,6 +61,12 @@
    }
 }
 
+%secondary-text {
+   font-weight: 400;
+   line-height: 1.8;
+   letter-spacing: 0.32px;
+}
+
 // %button {}
 
 %wh100 {
@@ -59,6 +77,16 @@
 
 %box-shadow {
    box-shadow: 0px 1px 0px 0px #D7D7D7;
+}
+
+
+// img
+
+%img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 
 
