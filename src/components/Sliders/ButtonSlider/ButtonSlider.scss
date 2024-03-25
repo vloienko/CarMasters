@@ -4,10 +4,18 @@
 .svg-arrow-slider {
    width: 53px;
    height: 53px;
-   fill: var(--bg-button-white);
-   stroke: var(--button-default);
    opacity: 0.8;
    transition: opacity .3s ease-in-out;
+
+   &.white  {
+      fill: var(--bg-button-white);
+      stroke: var(--button-default);
+   }
+
+   &.purple {
+      fill: var(--button-hover);
+      stroke: var(--icon-default);
+   }
 
    @media (any-hover: hover){
       &:hover{

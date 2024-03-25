@@ -24,6 +24,7 @@ export const MainSlider = () => {
             modules={[Navigation]}
             spaceBetween={10}
             slidesPerView={1}
+            grabCursor={true}
             // loop={true}
             navigation={{
                nextEl: ".slide-next-button",
@@ -37,8 +38,8 @@ export const MainSlider = () => {
             ))}
          </Swiper>
          
-         <SlideNextButton />
-         <SlidePrevButton />
+         <SlideNextButton color={'white'} />
+         <SlidePrevButton color={'white'} />
       </div>
    );
 };

@@ -72,7 +72,7 @@ export const Customers = () => {
                   </div>
                </div>
 
-               {!isMobile && renderCustomersItems() }
+               { !isMobile && renderCustomersItems() }
                
             </div>
          </div>

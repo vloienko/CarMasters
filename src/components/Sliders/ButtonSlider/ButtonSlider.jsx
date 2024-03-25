@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './ButtonSlider.scss';
 
 import { useEffect } from 'react';
@@ -5,7 +6,7 @@ import { useSwiper } from 'swiper/react';
 import { Icon } from '../../Icon/Icon';
 
 
-export const SlideNextButton = () => {
+export const SlideNextButton = ({ color }) => {
    const swiper = useSwiper();
 
    useEffect(() => {
@@ -24,13 +25,13 @@ export const SlideNextButton = () => {
 
    return (
       <button className="slide-next-button">
-         <Icon id="arrow-slider" className="svg-arrow-slider" />
+         <Icon id="arrow-slider" className={`svg-arrow-slider ${color}`} />
       </button>
    );
 }
 
 
-export const SlidePrevButton = () => {
+export const SlidePrevButton = ({ color }) => {
    const swiper = useSwiper();
 
    useEffect(() => {
@@ -49,7 +50,7 @@ export const SlidePrevButton = () => {
 
    return (
       <button className="slide-prev-button">
-         <Icon id="arrow-slider" className="svg-arrow-slider" />
+         <Icon id="arrow-slider" className={`svg-arrow-slider ${color}`} />
       </button>
    );
 }

@@ -11,7 +11,10 @@ export default defineConfig({
 	// Шрифти
 	resolve: {
 		alias: [
-			{ find: '@fonts', replacement: resolve(__dirname, 'src/assets/fonts') }
+			{ find: '@fonts', replacement: resolve(__dirname, 'src/assets/fonts') },
+			{ find: '@common', replacement: resolve(__dirname, 'src/assets/scss/common.scss') },
+			{ find: '@images', replacement: resolve(__dirname, 'src/assets/images/') }
+
 		]
 	}
 });

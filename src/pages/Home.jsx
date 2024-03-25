@@ -1,4 +1,5 @@
 import { Advantages } from '../components/_Sections/Advantages/Advantages';
+import { ClientSay } from '../components/_Sections/ClientSay/ClientSay';
 import { Customers } from '../components/_Sections/Customers/Customers';
 import { HowWork } from '../components/_Sections/HowWork/HowWork';
 import { MainMap } from '../components/_Sections/MainMap/MainMap';
@@ -15,6 +16,7 @@ export function Home() {
          <Advantages />
          <YourDream />
          <Customers />
+         <ClientSay />
       </>
    );
 }
