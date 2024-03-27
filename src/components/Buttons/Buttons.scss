@@ -98,3 +98,24 @@
       opacity: 0.5;
    }
 }
+
+.button-link {
+   @extend %button;
+
+   max-width: 180px;
+
+   border-color: var(--button-default);
+   color: var(--button-default);
+   background-color: var(--bg-button-white);
+
+   @media (any-hover: hover) {
+      &:hover {
+         border-color: var(--button-hover);
+         color: var(--button-hover);
+      }
+   }
+
+   &:disabled {
+      opacity: 0.5;
+   }
+}

@@ -19,3 +19,9 @@ export const RequestButtonChoice = () => {
       <button className='button-request-choice' type="button">Request a suv</button>
    );
 };
+
+export const AllArticlesLink = () => {
+   return (
+      <a className="button-link" href="#">All articles</a>
+   );
+};

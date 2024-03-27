@@ -3,10 +3,6 @@
 
 .client-say {
    @extend %sections-between;
-   
-   &__container {
-      
-   }
 
    & .slider-buttons {
       margin-top: 60px;

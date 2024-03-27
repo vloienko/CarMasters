@@ -7,7 +7,7 @@ import client_1 from '../../../assets/images/client/client-1.jpg';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SlideNextButton, SlidePrevButton } from '../ButtonSlider/ButtonSlider';
-import { useState, useEffect } from 'react';
+import { MobileCustomIsFalse, MobileCustomIsTrue } from '../../_WindowWidth/WidthIsTrueOrFalse';
 
 
 // Import Swiper styles
@@ -21,24 +21,6 @@ const clients = [
 
 
 export const SliderWithButtons = () => {
-
-   // Створюємо стан для відстеження ширини вікна
-   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-   // Функція для оновлення ширини вікна при зміні розміру екрану
-   const updateWindowWidth = () => {
-      setWindowWidth(window.innerWidth);
-   };
-
-   // Підписка на подію розміру вікна при завантаженні компонента
-   useEffect(() => {
-      window.addEventListener('resize', updateWindowWidth);
-      return () => window.removeEventListener('resize', updateWindowWidth);
-   }, []);
-
-   // Перевірка ширини вікна
-   const isMobileCustom = windowWidth <= 639.98;
-
 
    const renderSlideButtons = () => {
       return (
@@ -68,7 +50,7 @@ export const SliderWithButtons = () => {
                   <div className="client-say__slide">
                      <div className="client-say__image">
                         <img src={client.image} alt="Image client" />
-                        { isMobileCustom && renderSlideButtons() }
+                        <MobileCustomIsTrue nameFunction={renderSlideButtons} />
                      </div>
                      <div className="client-say__info">
                         <span className="client-say__name">
@@ -82,7 +64,7 @@ export const SliderWithButtons = () => {
                </SwiperSlide>
             ))}
 
-            { !isMobileCustom && renderSlideButtons() }
+            <MobileCustomIsFalse nameFunction={renderSlideButtons} />
            
          </Swiper>
 
