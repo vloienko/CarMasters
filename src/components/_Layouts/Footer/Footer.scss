@@ -19,10 +19,13 @@
 
       @media (max-width:$tablet){
          grid-template-columns: repeat(2, 1fr);
+         column-gap: 20px;
+         row-gap: 45px;
       }
 
       @media (max-width:$mobileCustom){
          grid-template-rows: repeat(3, 1fr);
+         gap: 25px;
       }
    }
 

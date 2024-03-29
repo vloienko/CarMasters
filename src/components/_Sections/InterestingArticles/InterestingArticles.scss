@@ -2,6 +2,11 @@
 
 .interest-articles {
    @extend %sections-between;
+   padding-bottom: 40px;
+
+   @media (max-width:$mobileSmall) {
+      padding-bottom: 30px;
+   }
 
    &__body {
       @media (max-width:$mobileCustom){
