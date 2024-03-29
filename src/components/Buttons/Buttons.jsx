@@ -25,3 +25,17 @@ export const AllArticlesLink = () => {
       <a className="button-link" href="#">All articles</a>
    );
 };
+
+
+// CreditScoreButtons.jsx
+const CreditScoreButtons = ({ onCreditChange }) => {
+   return (
+      <div className="credit-score-buttons">
+         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(150000, 0.05)}>Poor</button>
+         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(200000, 0.035)}>Average</button>
+         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(250000, 0.02)}>Good</button>
+      </div>
+   );
+};
+
+export default CreditScoreButtons;

@@ -21,8 +21,8 @@
       transform: scale(1.05);
    }
 
-   @media (max-width:$mobileSmall){
-      font-size: 14px; 
+   @media (max-width:$mobileSmall) {
+      font-size: 14px;
       height: 35px;
    }
 }
@@ -38,8 +38,8 @@
       color: var(--button-default);
       background-color: var(--bg-button-white);
 
-      @media (any-hover: hover){
-         &:hover{
+      @media (any-hover: hover) {
+         &:hover {
             border-color: var(--button-hover);
             color: var(--button-hover);
          }
@@ -55,7 +55,7 @@
 
       background-color: var(--button-default);
       color: var(--text-white);
-   
+
       @media (any-hover: hover) {
          &:hover {
             background-color: var(--button-hover);
@@ -117,5 +117,56 @@
 
    &:disabled {
       opacity: 0.5;
+   }
+}
+
+
+.credit-score-buttons {
+   @extend %flex-center;
+   align-self: flex-start;
+   border-radius: 2px;
+   max-width: 367px;
+   width: 100%;
+   justify-content: flex-start;
+
+   &__button {
+      @extend %button;
+
+      &:first-child {
+         border-top-right-radius: 0;
+         border-bottom-right-radius: 0;
+         border-right: 0.5px;
+      }
+
+      &:nth-child(2) {
+         border-radius: 0;
+      }
+
+      &:last-child {
+         border-top-left-radius: 0;
+         border-bottom-left-radius: 0;
+         border-left: 0.5px;
+      }
+
+      &:active {
+         transform: none;
+      }
+
+      &.white {
+         border-color: var(--button-default);
+         color: var(--button-default);
+         background-color: var(--bg-button-white);
+
+         @media (any-hover: hover) {
+            &:hover {
+               border-color: var(--button-hover);
+               color: var(--button-hover);
+            }
+         }
+
+         &:disabled {
+            opacity: 0.5;
+         }
+      }
    }
 }

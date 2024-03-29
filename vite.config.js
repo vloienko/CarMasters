@@ -13,7 +13,9 @@ export default defineConfig({
 		alias: [
 			{ find: '@fonts', replacement: resolve(__dirname, 'src/assets/fonts') },
 			{ find: '@common', replacement: resolve(__dirname, 'src/assets/scss/common.scss') },
-			{ find: '@images', replacement: resolve(__dirname, 'src/assets/images/') }
+			{ find: '@images', replacement: resolve(__dirname, 'src/assets/images/') },
+			// { find: '@path', replacement: resolve(__dirname, '/src/components/') }
+
 
 		]
 	}

@@ -1,0 +1,46 @@
+@import '@common';
+
+.how-much {
+   @extend %sections-between;
+
+   &__container {
+
+      & .calculator {
+         margin-top: 60px;
+
+         @media (max-width:$mobileSmall){
+            margin-top: 30px;
+         }
+      }
+   }
+
+   &__wrap {
+      @extend %flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @media (max-width:$mobile){
+         flex-direction: column;
+      }
+
+      h2 {
+         max-width: 500px;
+         min-width: 360px;
+
+         @media (max-width:$mobile){
+            min-width: auto; 
+         }
+      }
+   }
+
+   &__text {
+      margin-top: 10px;
+      margin-left: 60px;
+      @extend %secondary-text;
+      max-width: 600px;
+
+      @media (max-width:$mobile){
+         margin: 10px 0px 0px 0px;
+      }
+   }
+}
