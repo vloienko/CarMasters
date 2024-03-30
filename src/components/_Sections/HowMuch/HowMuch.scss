@@ -1,14 +1,27 @@
 @import '@common';
 
 .how-much {
-   @extend %sections-between;
+
+   &.section {
+      @extend %sections-between;
+   }
+
+   &.distance {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @media (max-width:$mobileSmall) {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+   }
 
    &__container {
 
       & .calculator {
          margin-top: 60px;
 
-         @media (max-width:$mobileSmall){
+         @media (max-width:$mobileSmall) {
             margin-top: 30px;
          }
       }
@@ -19,7 +32,7 @@
       align-items: flex-start;
       justify-content: space-between;
 
-      @media (max-width:$mobile){
+      @media (max-width:$mobile) {
          flex-direction: column;
       }
 
@@ -27,8 +40,8 @@
          max-width: 500px;
          min-width: 360px;
 
-         @media (max-width:$mobile){
-            min-width: auto; 
+         @media (max-width:$mobile) {
+            min-width: auto;
          }
       }
    }
@@ -39,7 +52,7 @@
       @extend %secondary-text;
       max-width: 600px;
 
-      @media (max-width:$mobile){
+      @media (max-width:$mobile) {
          margin: 10px 0px 0px 0px;
       }
    }

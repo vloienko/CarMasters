@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import './HowMuch.scss';
 
 import { HeadingH2 } from '../../_Items/Items';
 import LoanCalculator from '../../Calculator/Calculator';
 
 
-export const HowMuch = () => {
+export const HowMuch = ({ className }) => {
    const title = 'Let’s figure out how much you can afford';
 
    return (
-      <section className="how-much">
+      <section className={`how-much ${className}`}>
          <div className="how-much__container">
             <div className="how-much__wrap">
                <HeadingH2 title={title} />

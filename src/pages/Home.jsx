@@ -19,7 +19,7 @@ export function Home() {
          <YourDream />
          <Customers />
          <ClientSay />
-         <HowMuch />
+         <HowMuch className={'section'} />
          <InterestingArticles />
       </>
    );

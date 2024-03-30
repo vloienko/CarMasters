@@ -1,0 +1,27 @@
+@import '@common';
+
+.bg-title {
+   padding: 40px 0;
+   background: url('../../assets/images/icons/bg-title.svg') center/cover no-repeat;
+   position: relative;
+
+   @media (max-width:$mobileSmall){
+      padding: 20px 0;
+   }
+
+   &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--accent-color);
+      z-index: -1;
+   }
+
+   &__title {
+      @extend %h1-title;
+      color: var(--text-white);
+   }
+}

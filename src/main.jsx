@@ -7,6 +7,7 @@ import './style.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home.jsx';
 import { ContactUs } from './pages/ContactUs.jsx';
+import { Calculator } from './pages/Calculator.jsx';
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/CarMasters/",
         element: <Home />,
+      },
+      {
+        path: "/CarMasters/calculator",
+        element: <Calculator />,
       },
       {
         path: "/CarMasters/contact-us",
