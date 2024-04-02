@@ -1,7 +1,7 @@
 import './Calculator.scss';
 
 import { useState, useEffect } from 'react';
-import CreditScoreButtons from '../Buttons/Buttons'; // Замініть шляхом до вашого файлу
+import CreditScoreButtons from '../Buttons/Buttons';
 
 
 const LoanCalculator = () => {
@@ -16,7 +16,7 @@ const LoanCalculator = () => {
 
    useEffect(() => {
       calculatePayments();
-   }, []); // Додаємо useEffect для виклику calculatePayments при монтуванні компоненту
+   }, []); // Додаємо useEffect для виклику calculatePayments
 
    const calculatePayments = () => {
       const weeksInYear = 52;
