@@ -60,13 +60,13 @@ export const BlogContent = () => {
          }
       }
 
-      // Add event listener to window resize
+      // Додавання обробника подій для визначення змін розміру вікна
       window.addEventListener('resize', handleResize);
 
-      // Call handleResize to set initial value on component mount
+      // Виклик функції обробки для встановлення початкового значення
       handleResize();
 
-      // Remove event listener on component unmount
+      // Видалення обробника подій при розмонтуванні компонента
       return () => window.removeEventListener('resize', handleResize);
    }, []);
 
