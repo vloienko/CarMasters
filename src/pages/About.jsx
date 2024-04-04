@@ -3,6 +3,7 @@ import { MainContent } from '../components/_Sections/MainContent/MainContent';
 
 import kia from '../assets/images/all-cars/kia.png';
 import { GetCar } from '../components/_Sections/GetCar/GetCar';
+import { Convenience } from '../components/_Sections/Convenience/Convenience';
 
 
 export function About() {
@@ -19,7 +20,7 @@ export function About() {
          <BgTitle title={title} />
          <MainContent data={mainData} />
          <GetCar />
-         
+         <Convenience />
       </>
    );
 }
