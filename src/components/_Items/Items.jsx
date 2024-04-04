@@ -13,6 +13,6 @@ export const HeadingH2 = ({ title }) => {
 export const TextSecondary16 = ({ text }) => {
 
    return (
-      <h2 className="text-secondary">{text}</h2>
+      <p className="text-secondary">{text}</p>
    );
 };

@@ -2,6 +2,7 @@ import { BgTitle } from '../components/BgTitle/BgTitle';
 import { MainContent } from '../components/_Sections/MainContent/MainContent';
 
 import kia from '../assets/images/all-cars/kia.png';
+import { GetCar } from '../components/_Sections/GetCar/GetCar';
 
 
 export function About() {
@@ -17,6 +18,8 @@ export function About() {
       <>
          <BgTitle title={title} />
          <MainContent data={mainData} />
+         <GetCar />
+         
       </>
    );
 }
