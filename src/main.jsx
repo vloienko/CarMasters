@@ -11,6 +11,7 @@ import { Calculator } from './pages/Calculator.jsx';
 import { TermsConditions } from './pages/TermsConditions.jsx';
 import { PrivacyPolicy } from './pages/PrivacyPolicy.jsx';
 import { OurBlog } from './pages/OurBlog.jsx';
+import { About } from './pages/About.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
       {
         path: "/CarMasters/calculator",
         element: <Calculator />,
+      },
+
+      
+      {
+        path: "/CarMasters/about",
+        element: <About />,
       },
       {
         path: "/CarMasters/contact-us",
