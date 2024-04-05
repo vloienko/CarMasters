@@ -16,12 +16,18 @@ export const SlideNextButton = ({ color }) => {
          swiper.slideNext();
       };
 
-      document.querySelector('.slide-next-button').addEventListener('click', slideNext);
+      const slideNextButton = document.querySelector('.slide-next-button');
+      if (slideNextButton) {
+         slideNextButton.addEventListener('click', slideNext);
+      }
 
       return () => {
-         document.querySelector('.slide-next-button').removeEventListener('click', slideNext);
+         if (slideNextButton) {
+            slideNextButton.removeEventListener('click', slideNext);
+         }
       };
    }, [swiper]);
+
 
    return (
       <button className="slide-next-button">
@@ -41,12 +47,18 @@ export const SlidePrevButton = ({ color }) => {
          swiper.slidePrev();
       };
 
-      document.querySelector('.slide-prev-button').addEventListener('click', slidePrev);
+      const slidePrevButton = document.querySelector('.slide-prev-button');
+      if (slidePrevButton) {
+         slidePrevButton.addEventListener('click', slidePrev);
+      }
 
       return () => {
-         document.querySelector('.slide-prev-button').removeEventListener('click', slidePrev);
+         if (slidePrevButton) {
+            slidePrevButton.removeEventListener('click', slidePrev);
+         }
       };
    }, [swiper]);
+
 
    return (
       <button className="slide-prev-button">
