@@ -13,7 +13,7 @@ import { HowMuch } from '../components/_Sections/HowMuch/HowMuch';
 
 
 export function About() {
-   const title = 'About CM ';
+   const title = 'About CM';
 
    const mainData = {
       title: 'Our mission',

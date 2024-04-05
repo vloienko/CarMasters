@@ -12,6 +12,7 @@ import { TermsConditions } from './pages/TermsConditions.jsx';
 import { PrivacyPolicy } from './pages/PrivacyPolicy.jsx';
 import { OurBlog } from './pages/OurBlog.jsx';
 import { About } from './pages/About.jsx';
+import { LoanRates } from './pages/LoanRates.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/CarMasters/about",
         element: <About />,
+      },
+      {
+        path: "/CarMasters/loan-rates",
+        element: <LoanRates />,
       },
       {
         path: "/CarMasters/contact-us",
