@@ -3,6 +3,7 @@
 
 .our-qualified {
    @extend %sections-between;
+   display: none;
 
    &__container {
       @media (max-width:$tablet) {

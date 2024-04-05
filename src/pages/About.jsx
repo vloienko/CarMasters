@@ -6,6 +6,8 @@ import { GetCar } from '../components/_Sections/GetCar/GetCar';
 import { Convenience } from '../components/_Sections/Convenience/Convenience';
 import { OurQualified } from '../components/_Sections/OurQualified/OurQualified';
 import { BestPrices } from '../components/_Sections/BestPrices/BestPrices';
+import { ClientSay } from '../components/_Sections/ClientSay/ClientSay';
+import { DynamicTeam } from '../components/_Sections/DynamicTeam/DynamicTeam';
 
 
 export function About() {
@@ -25,6 +27,8 @@ export function About() {
          <Convenience />
          <BestPrices />
          <OurQualified />
+         <ClientSay />
+         <DynamicTeam />
       </>
    );
 }
