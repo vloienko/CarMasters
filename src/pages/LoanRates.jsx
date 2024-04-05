@@ -2,9 +2,9 @@ import chevrolet from '../assets/images/all-cars/chevrolet.png';
 
 import { BgTitle } from '../components/BgTitle/BgTitle';
 import { MainContent } from '../components/_Sections/MainContent/MainContent';
-
-import { HowMuch } from '../components/_Sections/HowMuch/HowMuch';
 import { InterestRates } from '../components/_Sections/InterestRates/InterestRates';
+import { Benefits } from '../components/_Sections/Benefits/Benefits';
+import { HowMuch } from '../components/_Sections/HowMuch/HowMuch';
 
 
 export function LoanRates() {
@@ -22,6 +22,7 @@ export function LoanRates() {
          <BgTitle title={title} />
          <MainContent data={mainData} />
          <InterestRates />
+         <Benefits />
          <HowMuch className={'section about'} />
       </>
    );
