@@ -2,6 +2,12 @@
 import './Buttons.scss';
 
 
+export const PurpleButton = ({ name }) => {
+   return (
+      <button className='purple-button' type="button">{name}</button>
+   );
+};
+
 export const InventoryButton = ({ color }) => {
    return (
       <button className={`button-inventory ${color}`} type="button">Inventory</button>

@@ -1,9 +1,11 @@
+import kia from '../assets/images/all-cars/kia.png';
+
 import { BgTitle } from '../components/BgTitle/BgTitle';
 import { MainContent } from '../components/_Sections/MainContent/MainContent';
-
-import kia from '../assets/images/all-cars/kia.png';
 import { GetCar } from '../components/_Sections/GetCar/GetCar';
 import { Convenience } from '../components/_Sections/Convenience/Convenience';
+import { OurQualified } from '../components/_Sections/OurQualified/OurQualified';
+import { BestPrices } from '../components/_Sections/BestPrices/BestPrices';
 
 
 export function About() {
@@ -21,6 +23,8 @@ export function About() {
          <MainContent data={mainData} />
          <GetCar />
          <Convenience />
+         <BestPrices />
+         <OurQualified />
       </>
    );
 }

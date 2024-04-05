@@ -85,6 +85,7 @@
 
    &__sub-title {
       @extend %h3-title;
+      text-align: center;
       color: var(--text-purple);
 
       @media (max-width:$mobileSmall){

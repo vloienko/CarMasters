@@ -28,6 +28,21 @@
 }
 
 
+.purple-button {
+   @extend %button;
+   max-width: 200px;
+
+   background-color: var(--button-default);
+   color: var(--text-white);
+
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: var(--button-hover);
+      }
+   }
+}
+
+
 .button-inventory {
    @extend %button;
 

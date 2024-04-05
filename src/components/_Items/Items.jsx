@@ -10,6 +10,21 @@ export const HeadingH2 = ({ title }) => {
 };
 
 
+export const HeadingH3 = ({ title }) => {
+
+   return (
+      <h3 className="heading-h3">{title}</h3>
+   );
+};
+
+export const Heading4 = ({ title }) => {
+
+   return (
+      <h4 className="heading-h4">{title}</h4>
+   );
+};
+
+
 export const TextSecondary16 = ({ text }) => {
 
    return (
