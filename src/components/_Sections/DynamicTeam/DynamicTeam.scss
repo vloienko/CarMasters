@@ -56,6 +56,9 @@
    }
 
    &__image {
+      border-radius: 5px;
+      overflow: hidden;
+      
       margin-top: 15px;
       margin-bottom: 9px;
       max-width: 600px;
@@ -77,7 +80,7 @@
          }
 
          @media (max-width:$mobileSmall){
-            max-height: 227px;
+            max-height: 228px;
          }
       }
    }

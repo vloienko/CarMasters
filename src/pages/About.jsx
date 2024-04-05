@@ -8,6 +8,7 @@ import { OurQualified } from '../components/_Sections/OurQualified/OurQualified'
 import { BestPrices } from '../components/_Sections/BestPrices/BestPrices';
 import { ClientSay } from '../components/_Sections/ClientSay/ClientSay';
 import { DynamicTeam } from '../components/_Sections/DynamicTeam/DynamicTeam';
+import { MainFeatures } from '../components/_Sections/MainFeatures/MainFeatures';
 
 
 export function About() {
@@ -18,6 +19,7 @@ export function About() {
       text: 'Our mission at CM is to help you find the perfect car at the perfect price and with the perfect auto loan. We make buying a car simple. You can complete the entire process from home—we’ll even deliver the car to you!',
       image: kia
    };
+   
 
    return (
       <>
@@ -29,6 +31,7 @@ export function About() {
          <OurQualified />
          <ClientSay />
          <DynamicTeam />
+         <MainFeatures />
       </>
    );
 }
