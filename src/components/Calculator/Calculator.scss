@@ -55,6 +55,9 @@
       input {
          grid-column: 2 span;
       }
+      & .horizontal-slider {
+         grid-column: 2 span;
+      }
 
       label {
          color: var(--text-content);

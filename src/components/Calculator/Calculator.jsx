@@ -2,12 +2,14 @@ import './Calculator.scss';
 
 import { useState, useEffect } from 'react';
 import CreditScoreButtons from '../Buttons/Buttons';
+import { ReactSliderCalculator } from '../ReactSlider/ReactSlider';
 
 
 const LoanCalculator = () => {
    const [loanAmount, setLoanAmount] = useState(150000);
    const [interestRate, setInterestRate] = useState(0.05); // Початкова ставка для 'Poor'
    const [loanDuration, setLoanDuration] = useState(18);
+   const [sliderDefaults, setSliderDefaults] = useState({ defaultValue: 150000 }); // Новий стан для початкового значення слайдера
    const [paymentSchedule, setPaymentSchedule] = useState({
       weekly: '',
       biWeekly: '',
@@ -17,6 +19,11 @@ const LoanCalculator = () => {
    useEffect(() => {
       calculatePayments();
    }, []); // Додаємо useEffect для виклику calculatePayments
+
+   // Функція для обробки зміни початкового значення слайдера
+   const handleSliderChange = (value) => {
+      setLoanAmount(value);
+   };
 
    const calculatePayments = () => {
       const weeksInYear = 52;
@@ -44,6 +51,8 @@ const LoanCalculator = () => {
    const handleCreditChange = (newLoanAmount, newInterestRate) => {
       setLoanAmount(newLoanAmount);
       setInterestRate(newInterestRate);
+      // Оновлюємо початкові значення слайдера
+      setSliderDefaults({ defaultValue: newLoanAmount }); // Додаткова змінна для оновлення початкового значення слайдера
       calculatePayments(); // Викликаємо розрахунок платежів після зміни кредитного рейтингу
    };
 
@@ -59,25 +68,37 @@ const LoanCalculator = () => {
                <div className="calculator__control">
                   <label className="calculator__label">Loan Amount</label>
                   <span className="calculator__value">$ {formatNumber(loanAmount)}</span>
-                  <input
+                  {/* <input
                      className="calculator__slider"
                      type="range"
                      min="5000"
                      max="500000"
                      value={loanAmount}
                      onChange={(e) => setLoanAmount(Number(e.target.value))}
+                  /> */}
+                  <ReactSliderCalculator
+                     min={5000}
+                     max={500000}
+                     defaultValue={sliderDefaults.defaultValue}
+                     onChange={handleSliderChange}
                   />
                </div>
                <div className="calculator__control">
                   <label className="calculator__label">Loan Duration</label>
                   <span className="calculator__value">{loanDuration} <span className="small">month</span></span>
-                  <input
+                  {/* <input
                      className="calculator__slider"
                      type="range"
                      min="1"
                      max="60"
                      value={loanDuration}
                      onChange={(e) => setLoanDuration(Number(e.target.value))}
+                  /> */}
+                  <ReactSliderCalculator
+                     min={1}
+                     max={60}
+                     defaultValue={loanDuration}
+                     onChange={(value) => setLoanDuration(value)}
                   />
                </div>
             </div>

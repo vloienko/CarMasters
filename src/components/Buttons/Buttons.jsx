@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import './Buttons.scss';
 
+import { useState } from 'react';
+
 
 export const PurpleButton = ({ name }) => {
    return (
@@ -35,11 +37,33 @@ export const AllArticlesLink = () => {
 
 // CreditScoreButtons.jsx
 const CreditScoreButtons = ({ onCreditChange }) => {
+   const [activeButton, setActiveButton] = useState('Poor');
+
+   const handleButtonClick = (newLoanAmount, newInterestRate, buttonName) => {
+      setActiveButton(buttonName);
+      onCreditChange(newLoanAmount, newInterestRate);
+   };
+
    return (
       <div className="credit-score-buttons">
-         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(150000, 0.05)}>Poor</button>
-         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(200000, 0.035)}>Average</button>
-         <button className="credit-score-buttons__button white" onClick={() => onCreditChange(250000, 0.02)}>Good</button>
+         <button
+            className={`credit-score-buttons__button white ${activeButton === 'Poor' ? 'active' : ''}`}
+            onClick={() => handleButtonClick(150000, 0.05, 'Poor')}
+         >
+            Poor
+         </button>
+         <button
+            className={`credit-score-buttons__button white ${activeButton === 'Average' ? 'active' : ''}`}
+            onClick={() => handleButtonClick(150000, 0.035, 'Average')}
+         >
+            Average
+         </button>
+         <button
+            className={`credit-score-buttons__button white ${activeButton === 'Good' ? 'active' : ''}`}
+            onClick={() => handleButtonClick(150000, 0.02, 'Good')}
+         >
+            Good
+         </button>
       </div>
    );
 };
