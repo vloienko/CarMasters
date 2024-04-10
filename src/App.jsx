@@ -19,6 +19,8 @@ function App() {
         <Link to="/CarMasters/terms-conditions">Terms Conditions</Link>
         <Link to="/CarMasters/privacy-policy">Privacy Policy</Link>
         <Link to="/CarMasters/blog">Our blog</Link>
+
+        <Link to="/CarMasters/catalog">Catalog</Link>
       </nav>
 
 

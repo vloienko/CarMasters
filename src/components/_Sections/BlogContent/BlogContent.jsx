@@ -12,6 +12,7 @@ import image_6 from '@images/article-preview/image-6.jpg';
 import image_7 from '@images/article-preview/image-7.jpg';
 import image_8 from '@images/article-preview/image-8.jpg';
 import image_9 from '@images/article-preview/image-9.jpg';
+import { Pagination } from '../../_Layouts/Pagination/Pagination';
 
 
 const articlesData = [
@@ -93,14 +94,13 @@ export const BlogContent = () => {
                   />
                ))}
             </div>
-            {/* Пагінація */}
-            <div className="pagination">
-               {Array.from({ length: Math.ceil(articlesData.length / articlesPerPage) }, (_, i) => (
-                  <button key={i} onClick={() => handleClick(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>
-                     {i + 1}
-                  </button>
-               ))}
-            </div>
+
+            <Pagination
+               itemsData={articlesData}
+               itemsPerPage={articlesPerPage}
+               handleClick={handleClick}
+               currentPage={currentPage}
+            />
          </div>
       </div>
    );

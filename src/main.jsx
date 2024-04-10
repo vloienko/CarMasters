@@ -13,6 +13,7 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy.jsx';
 import { OurBlog } from './pages/OurBlog.jsx';
 import { About } from './pages/About.jsx';
 import { LoanRates } from './pages/LoanRates.jsx';
+import { Catalog } from './pages/Catalog.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,12 @@ const router = createBrowserRouter([
       {
         path: "/CarMasters/blog",
         element: <OurBlog />
+      },
+
+      
+      {
+        path: "/CarMasters/catalog",
+        element: <Catalog />
       },
     ]
   }
