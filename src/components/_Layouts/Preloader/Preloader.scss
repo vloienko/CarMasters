@@ -1,0 +1,7 @@
+@import '@common';
+
+
+.preloader {
+   @extend %wh100;
+   @extend %flex-center;
+}

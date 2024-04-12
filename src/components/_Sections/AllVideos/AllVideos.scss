@@ -4,7 +4,12 @@
 .all-videos {
    margin: 40px 0;
 
-   @media (max-width:$mobileSmall){
+   & .preloader {
+      min-height: 837px;
+      height: 100%;
+   }
+
+   @media (max-width:$mobileSmall) {
       margin: 30px 0;
    }
 
@@ -12,11 +17,11 @@
       @extend %grid-2column;
       gap: 40px;
 
-      @media (max-width:$tablet){
+      @media (max-width:$tablet) {
          grid-template-columns: 1fr;
       }
 
-      @media (max-width:$mobileSmall){
+      @media (max-width:$mobileSmall) {
          gap: 20px;
       }
    }

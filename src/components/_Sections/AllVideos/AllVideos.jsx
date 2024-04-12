@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { CardVideo } from '../../CardVideo/CardVideo';
 import { Pagination } from '../../_Layouts/Pagination/Pagination';
+import { Preloader } from '../../_Layouts/Preloader/Preloader';
 
 import preview_1 from '@images/video-preview/preview-1.jpg';
 import preview_2 from '@images/video-preview/preview-2.jpg';
@@ -78,32 +79,41 @@ const videosData = [
 
 
 export const AllVideos = () => {
-   const videosPerPage = 4; // Кількість відео на сторінці
+
+   const videosPerPage = 4;
    const [currentPage, setCurrentPage] = useState(1);
+   const [loading, setLoading] = useState(false);
+
+   const handleClick = (page) => {
+      setLoading(true); // Активувати прелоадер
+      setTimeout(() => {
+         setCurrentPage(page);
+         setLoading(false); // Деактивувати прелоадер після "завантаження" даних
+      }, 500);
+   };
 
    // Обрахування даних для поточної сторінки
    const indexOfLastArticle = currentPage * videosPerPage;
    const indexOfFirstArticle = indexOfLastArticle - videosPerPage;
    const currentVideos = videosData.slice(indexOfFirstArticle, indexOfLastArticle);
 
-   const handleClick = (page) => {
-      setCurrentPage(page);
-   };
 
    return (
       <div className="all-videos">
          <div className="all-videos__container">
-            <div className="all-videos__body">
-               {currentVideos.map((video, index) => (
-                  <CardVideo
-                     key={index}
-                     videoId={video.videoId}
-                     thumbnail={video.thumbnail}
-                     alt={video.alt}
-                     title={video.title}
-                  />
-               ))}
-            </div>
+            <Preloader loading={loading}>
+               <div className="all-videos__body">
+                  {currentVideos.map((video, index) => (
+                     <CardVideo
+                        key={index}
+                        videoId={video.videoId}
+                        thumbnail={video.thumbnail}
+                        alt={video.alt}
+                        title={video.title}
+                     />
+                  ))}
+               </div>
+            </Preloader>
 
             <Pagination
                itemsData={videosData}
