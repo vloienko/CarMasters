@@ -4,11 +4,12 @@ import './DropdownLists.scss';
 import Select from 'react-dropdown-select';
 
 
-export const Dropdown = ({ options }) => {
+export const DropdownMulti = ({ options, search }) => {
    return (
       <Select
          options={options}
          multi
+         placeholder={search}
       />
    );
 }

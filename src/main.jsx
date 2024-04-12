@@ -14,6 +14,7 @@ import { OurBlog } from './pages/OurBlog.jsx';
 import { About } from './pages/About.jsx';
 import { LoanRates } from './pages/LoanRates.jsx';
 import { Catalog } from './pages/Catalog.jsx';
+import { VehicleVideos } from './pages/VehicleVideos.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,8 +30,10 @@ const router = createBrowserRouter([
         path: "/CarMasters/calculator",
         element: <Calculator />,
       },
-
-      
+      {
+        path: "/CarMasters/videos",
+        element: <VehicleVideos />,
+      },
       {
         path: "/CarMasters/about",
         element: <About />,
