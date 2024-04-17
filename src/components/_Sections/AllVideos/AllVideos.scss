@@ -4,10 +4,14 @@
 .all-videos {
    margin: 40px 0;
 
-   & .preloader {
-      min-height: 837px;
-      height: 100%;
-   }
+   // & .preloader {
+   //    min-height: 837px !important;
+   //    height: 100%;
+
+   //    @media (max-width:$tablet){
+   //       min-height: auto !important;
+   //    }
+   // }
 
    @media (max-width:$mobileSmall) {
       margin: 30px 0;
@@ -16,6 +20,7 @@
    &__body {
       @extend %grid-2column;
       gap: 40px;
+      align-self: flex-start;
 
       @media (max-width:$tablet) {
          grid-template-columns: 1fr;

@@ -15,6 +15,7 @@ import { About } from './pages/About.jsx';
 import { LoanRates } from './pages/LoanRates.jsx';
 import { Catalog } from './pages/Catalog.jsx';
 import { VehicleVideos } from './pages/VehicleVideos.jsx';
+import { Quiz } from './pages/Quiz.jsx';
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/CarMasters/catalog",
         element: <Catalog />
+      },
+      {
+        path: "/CarMasters/quiz",
+        element: <Quiz />
       },
     ]
   }

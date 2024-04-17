@@ -22,8 +22,9 @@ function App() {
         <Link to="/CarMasters/blog">Our blog</Link>
 
         <Link to="/CarMasters/catalog">Catalog</Link>
+        <Link to="/CarMasters/quiz">Quiz</Link>
       </nav>
-
+      
 
       <div className="App">
         <div className="wrapper">
